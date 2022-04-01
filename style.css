@@ -1,0 +1,56 @@
+body{
+    margin:0;
+}
+
+tr {
+    width: 400px;
+}
+
+td {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(138, 123, 209, 0.1);
+}
+
+table{
+    border-collapse: collapse;              /* bestimmt, ob die Zellen innerhalb einer Tabelle mit einem gemeinsamen oder getrennten Rahmen dargestellt werden.*/
+}
+
+table td{
+    border: 5px solid black;
+}
+table tr td:first-child{                        /*gilt für alle Zeile, nur beim 1. TD-Element*/
+    border-left: unset;
+}
+
+table tr:first-child td{                        /*gilt nur für die 1. Zeile, bei jedem TD-Element*/
+    border-top: unset;
+}
+
+table tr:last-child td{                          /*gilt nur für die 3. Zeile, bei jedem TD-Element*/
+    border-bottom: unset;
+}
+
+table tr td:last-child{
+    border-right: unset;
+}
+
+.fa-cat, .fa-dog{
+    position: absolute;
+    font-size: 100px;
+    top:15px;
+    left:10px;
+}
+
+.fa-dog{
+    color: rgb(66, 27, 27);
+}
+
+.d-none{
+    display: none !important;
+}
