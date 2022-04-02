@@ -1,5 +1,16 @@
 body{
     margin:0;
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.player span{
+    font-size: 15px;
 }
 
 tr {
@@ -42,9 +53,23 @@ table tr td:last-child{
 
 .fa-cat, .fa-dog{
     position: absolute;
-    font-size: 100px;
+    font-size: 90px;
     top:15px;
     left:10px;
+}
+
+.player{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: unset !important;
+    font-size: 40px !important;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.player-inactive{
+    opacity: 0.5;
 }
 
 .fa-dog{
@@ -53,4 +78,54 @@ table tr td:last-child{
 
 .d-none{
     display: none !important;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.horizontal-line{
+    width: 350px;
+    height: 10px;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.make-vertical{
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.end {
+    position: absolute;
+    height: 500px;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart {
+    position: absolute;
+    z-index: 10;
+    border:1px solid rgba(0,0,0,0.5);
+    background-color: #F900F7;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+.restart:hover{
+    background-color: #f900f9b4;
 }

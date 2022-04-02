@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,30 @@
     <script src="script.js"></script>
     <title>Tic tac toe</title>
 </head>
+
 <body>
-     <table>            <!-- table>tr>td*3, verkürzte Schreibweise -->
+    <div class="info" id="info"><b>Bitte den gewüschten Spieler auswählen:</b></div>
+    <div class="player">
+        <div onclick="chosePlayer('dog')">
+            <i id="dog" class="fa-solid fa-cat player player-inactive"><span>Spieler 1</span></i>
+        </div>
+        <div onclick="chosePlayer('cat')">
+            <i id="cat" class="fa-solid fa-dog player player-inactive"><span>Spieler 2</span></i>
+        </div>
+    </div>
+    <div><img id="endscreen" class="end d-none" src="gameover.png">
+        <button onclick="restart()" id="restart" class="restart d-none">Restart</button>
+    <div id="1" class="horizontal-line" style="top: 410px"></div>
+    <div id="2" class="horizontal-line" style="top: 550px"></div>
+    <div id="3" class="horizontal-line" style="top: 670px"></div>
+    <div id="4" class="horizontal-line make-vertical" style="top: 540px; left:190px"></div>
+    <div id="5" class="horizontal-line make-vertical" style="top: 540px; left:330px"></div>
+    <div id="6" class="horizontal-line make-vertical" style="top: 540px; left:470px"></div>
+    <div id="7" class="horizontal-line" style="top: 540px; transform: rotate(45deg) scaleX(0.0); left:325px"></div>
+    <div id="8" class="horizontal-line" style="top: 540px; transform: rotate(135deg) scaleX(.0); left:320px"></div>
+
+    <table>
+        <!-- table>tr>td*3, verkürzte Schreibweise -->
         <tr>
             <td onclick="fillShape(0)">
                 <i id="cat0" class="fa-solid fa-cat d-none"></i>
@@ -54,5 +77,7 @@
             </td>
         </tr>
     </table>
+    </div>
 </body>
+
 </html>
